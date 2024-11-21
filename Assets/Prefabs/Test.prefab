@@ -184,10 +184,10 @@ MonoBehaviour:
   _onHoverBegan:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 657432822099793209}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 9091500168553982935}
+        m_TargetAssemblyTypeName: Game.OutlineComponent, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -199,10 +199,10 @@ MonoBehaviour:
   _onHoverEnded:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 657432822099793209}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 9091500168553982935}
+        m_TargetAssemblyTypeName: Game.OutlineComponent, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -225,13 +225,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onDragBegan:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9091500168553982935}
+        m_TargetAssemblyTypeName: Game.OutlineComponent, Assembly-CSharp
+        m_MethodName: FadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onDragging:
     m_PersistentCalls:
       m_Calls: []
   _onDragEnded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9091500168553982935}
+        m_TargetAssemblyTypeName: Game.OutlineComponent, Assembly-CSharp
+        m_MethodName: FadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7056309971664366261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,6 +271,30 @@ MonoBehaviour:
   _handler: {fileID: 3689946752687826632}
   _rigidbody: {fileID: 3306404241704690604}
   _force: 20
+  _velocityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 30
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1152994979121881330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,19 +356,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4392ee0912001409dfc932a5cb387d, type: 3}
---- !u!114 &657432822099793209 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1810422277883213259, guid: 2f4392ee0912001409dfc932a5cb387d, type: 3}
-  m_PrefabInstance: {fileID: 1152994979121881330}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0888eb8e829f0d2499098da2ec97208a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8002726523994356215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9155580052117248261, guid: 2f4392ee0912001409dfc932a5cb387d, type: 3}
   m_PrefabInstance: {fileID: 1152994979121881330}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9091500168553982935 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7938506865284877093, guid: 2f4392ee0912001409dfc932a5cb387d, type: 3}
+  m_PrefabInstance: {fileID: 1152994979121881330}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32b9064751fea499d5705833fff212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

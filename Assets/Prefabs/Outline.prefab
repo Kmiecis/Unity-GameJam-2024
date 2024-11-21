@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8053454761126534262}
   - component: {fileID: 5997519309514706993}
   - component: {fileID: 1810422277883213259}
+  - component: {fileID: 7938506865284877093}
+  - component: {fileID: 3569361567249006893}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
@@ -78,3 +80,33 @@ MonoBehaviour:
   _target: {fileID: 0}
   _depth: -1
   _index: -1
+--- !u!114 &7938506865284877093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539367666333099084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e32b9064751fea499d5705833fff212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _applier: {fileID: 1810422277883213259}
+  _alpha: {fileID: 3569361567249006893}
+--- !u!114 &3569361567249006893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539367666333099084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8de247c323d39e48aa4ce541fcd123c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _instances:
+  - {fileID: 5997519309514706993}
+  _value: 1
+  _name: _Color
