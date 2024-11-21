@@ -23,12 +23,30 @@
       "dependencies": {},
       "hash": "623a5f9d481b4aaa075e7ce562ee19d0c631b577"
     },
+    "com.kmiecis.material.instancer": {
+      "version": "https://github.com/Kmiecis/Unity-Package-Materials.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "d05a3e743a4ef27e115ed2a0b21646d44a572c6f"
+    },
     "com.kmiecis.object.pooling": {
       "version": "https://github.com/Kmiecis/Unity-Package-ObjectPooling.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
       "hash": "31fd4a733cea4bb96837a8f3f3c66acf984b492d"
+    },
+    "com.kmiecis.ui.commons": {
+      "version": "https://github.com/Kmiecis/Unity-Package-UI-Commons.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "41ad02216c070cfe249339c9476b5aa170968286"
     },
     "com.unity.collab-proxy": {
       "version": "2.5.2",
