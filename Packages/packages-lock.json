@@ -1,5 +1,35 @@
 {
   "dependencies": {
+    "com.kmiecis.commons": {
+      "version": "https://github.com/Kmiecis/Unity-Package-Commons.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "12fe0eb1268537174a86742d5a7fb03423f13ca3"
+    },
+    "com.kmiecis.cosequencer": {
+      "version": "https://github.com/Kmiecis/Unity-Package-CoSequencer.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "91b0a9466838ecc42339a0db1868ed4769334cb7"
+    },
+    "com.kmiecis.dynamic.injection": {
+      "version": "https://github.com/Kmiecis/Unity-Package-DynamicInjection.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "623a5f9d481b4aaa075e7ce562ee19d0c631b577"
+    },
+    "com.kmiecis.object.pooling": {
+      "version": "https://github.com/Kmiecis/Unity-Package-ObjectPooling.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "31fd4a733cea4bb96837a8f3f3c66acf984b492d"
+    },
     "com.unity.collab-proxy": {
       "version": "2.5.2",
       "depth": 0,
