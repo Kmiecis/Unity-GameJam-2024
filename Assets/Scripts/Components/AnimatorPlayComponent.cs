@@ -9,7 +9,7 @@ namespace Game
 
         public void Play()
         {
-            _animator.Play(_state);
+            PlayAny(_state);
         }
 
         public void PlayAny(string state)
