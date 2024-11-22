@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.fonts.roboto": "https://github.com/RageAgainstThePixel/com.fonts.roboto.git#upm",
     "com.kmiecis.commons": "https://github.com/Kmiecis/Unity-Package-Commons.git",
     "com.kmiecis.cosequencer": "https://github.com/Kmiecis/Unity-Package-CoSequencer.git",
     "com.kmiecis.dynamic.injection": "https://github.com/Kmiecis/Unity-Package-DynamicInjection.git",

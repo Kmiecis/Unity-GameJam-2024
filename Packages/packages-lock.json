@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.fonts.roboto": {
+      "version": "https://github.com/RageAgainstThePixel/com.fonts.roboto.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "2.1.6"
+      },
+      "hash": "880a1112ad2b16ca2c2ffeb39b0eca028c6ec518"
+    },
     "com.kmiecis.commons": {
       "version": "https://github.com/Kmiecis/Unity-Package-Commons.git",
       "depth": 0,
