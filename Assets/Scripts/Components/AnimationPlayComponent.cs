@@ -16,5 +16,10 @@ namespace Game
         {
             _animation.Play(name);
         }
+
+        private void Reset()
+        {
+            _animation = GetComponent<Animation>();
+        }
     }
 }

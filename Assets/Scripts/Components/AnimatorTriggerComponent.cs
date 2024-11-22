@@ -16,5 +16,10 @@ namespace Game
         {
             _animator.SetTrigger(trigger);
         }
+
+        private void Reset()
+        {
+            _animator = GetComponent<Animator>();
+        }
     }
 }
