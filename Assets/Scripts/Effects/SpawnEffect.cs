@@ -1,49 +1,14 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace Game
 {
-    public class SpawnEffect : MonoBehaviour
+    public class SpawnEffect : BaseEffect
     {
         [SerializeField] private GameObject _prefab;
 
-        public void Spawn()
+        protected override GameObject GetTarget()
         {
-            Instantiate(_prefab);
-        }
-
-        public void Spawn(Component component)
-        {
-            var instance = Instantiate(_prefab);
-
-            if (instance.TryGetComponent<Transform>(out var targetTransform))
-            {
-                targetTransform.position = component.transform.position;
-            }
-
-            if (instance.TryGetComponent<Rigidbody>(out var targetRigidbody))
-            {
-                if (component is NavMeshAgent sourceAgent)
-                {
-                    targetRigidbody.velocity = sourceAgent.velocity;
-                }
-                else if (component is Rigidbody sourceRigidbody)
-                {
-                    targetRigidbody.velocity = sourceRigidbody.velocity;
-                }
-            }
-
-            if (instance.TryGetComponent<TranslateComponent>(out var targetTranslate))
-            {
-                if (component is NavMeshAgent sourceAgent)
-                {
-                    targetTranslate.velocity = sourceAgent.velocity;
-                }
-                else if (component is Rigidbody sourceRigidbody)
-                {
-                    targetTranslate.velocity = sourceRigidbody.velocity;
-                }
-            }
+            return Instantiate(_prefab);
         }
     }
 }
