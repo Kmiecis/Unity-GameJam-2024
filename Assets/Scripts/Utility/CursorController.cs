@@ -1,7 +1,9 @@
+using Common.Injection;
 using UnityEngine;
 
 namespace Game
 {
+    [DI_Install]
     public class CursorController : MonoBehaviour
     {
         public KeyCode lockKey = KeyCode.Mouse0;
@@ -29,9 +31,19 @@ namespace Game
             }
         }
 
+        private void OnEnable()
+        {
+            DI_Binder.Bind(this);
+        }
+
         private void Update()
         {
             ReadCursorState();
+        }
+
+        private void OnDisable()
+        {
+            DI_Binder.Unbind(this);
         }
     }
 }

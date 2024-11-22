@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace PrototypeEditor
+namespace GameEditor
 {
     public static partial class MeshTools
     {
@@ -14,7 +14,7 @@ namespace PrototypeEditor
             public Vector3 normal;
         }
 
-        [MenuItem("Assets/Prototype/Mesh/Smooth Normals")]
+        [MenuItem("Assets/Game/Mesh/Smooth Normals")]
         public static void MenuSmooth()
         {
             var selections = Selection.objects;
@@ -49,7 +49,7 @@ namespace PrototypeEditor
             }
         }
 
-        [MenuItem("Assets/Prototype/Mesh/Outline Normals")]
+        [MenuItem("Assets/Game/Mesh/Outline Normals")]
         public static void MenuOutline()
         {
             var selections = Selection.objects;

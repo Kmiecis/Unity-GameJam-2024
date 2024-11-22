@@ -2,11 +2,11 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace PrototypeEditor
+namespace GameEditor
 {
     public static partial class MeshTools
     {
-        [MenuItem("Assets/Prototype/Mesh/Toggle Readable")]
+        [MenuItem("Assets/Game/Mesh/Toggle Readable")]
         public static void MenuToggle()
         {
             var selections = Selection.objects;
