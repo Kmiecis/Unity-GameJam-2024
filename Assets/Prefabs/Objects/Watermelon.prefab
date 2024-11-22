@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3089146146934175395}
   - component: {fileID: 3691471336907600806}
   - component: {fileID: 4815327497731033587}
+  - component: {fileID: 5602999208892495406}
   m_Layer: 0
   m_Name: Watermelon
   m_TagString: Throwable
@@ -214,6 +215,18 @@ CapsuleCollider:
   m_Height: 0.9729967
   m_Direction: 1
   m_Center: {x: -0.0044161677, y: 0.3489983, z: 0.0897938}
+--- !u!114 &5602999208892495406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962338504253746782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65f7db0b728fa249b6f393923229edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &483809289308905698
 PrefabInstance:
   m_ObjectHideFlags: 0

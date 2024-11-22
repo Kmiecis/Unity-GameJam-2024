@@ -239,6 +239,7 @@ GameObject:
   - component: {fileID: 3270294593545369785}
   - component: {fileID: 3089146146934175395}
   - component: {fileID: 3691471336907600806}
+  - component: {fileID: -2088026147203299724}
   m_Layer: 0
   m_Name: Tshirt
   m_TagString: Throwable
@@ -437,3 +438,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2088026147203299724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7962338504253746782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e65f7db0b728fa249b6f393923229edf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
