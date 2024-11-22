@@ -16,6 +16,7 @@ namespace Game
         {
             if (++_highlights == 1 && gameObject.activeInHierarchy)
             {
+                _applier.ClearClone();
                 _applier.ApplyClone();
 
                 _faderoutine.Stop(this);
