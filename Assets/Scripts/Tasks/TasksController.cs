@@ -9,6 +9,11 @@ namespace Game
     {
         private List<TaskController> _tasks = new List<TaskController>();
 
+        public List<TaskController> AllTasks
+        {
+            get => _tasks;
+        }
+
         public void AddTask(TaskController task)
         {
             _tasks.Add(task);
