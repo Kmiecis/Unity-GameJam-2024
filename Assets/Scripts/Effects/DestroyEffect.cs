@@ -8,5 +8,10 @@ namespace Game
         {
             Destroy(gameObject);
         }
+
+        public void DestroyAny(GameObject gameObject)
+        {
+            Destroy(gameObject);
+        }
     }
 }
