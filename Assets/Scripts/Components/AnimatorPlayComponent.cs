@@ -16,5 +16,10 @@ namespace Game
         {
             _animator.Play(state);
         }
+
+        private void Reset()
+        {
+            _animator = GetComponent<Animator>();
+        }
     }
 }
