@@ -2638,15 +2638,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6823514911845408415, guid: 2762fb2d3e24456469d119366b011e4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.709
+      value: -5.047
       objectReference: {fileID: 0}
     - target: {fileID: 6823514911845408415, guid: 2762fb2d3e24456469d119366b011e4c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.983
+      value: 4.709
       objectReference: {fileID: 0}
     - target: {fileID: 6823514911845408415, guid: 2762fb2d3e24456469d119366b011e4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.476
+      value: 1.598
       objectReference: {fileID: 0}
     - target: {fileID: 6823514911845408415, guid: 2762fb2d3e24456469d119366b011e4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7833,6 +7833,23 @@ Transform:
   - {fileID: 1775155856}
   m_Father: {fileID: 2111041426}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1472220351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7962338504253746782, guid: 4e003f52211472a4ea85629eb66ba330, type: 3}
+  m_PrefabInstance: {fileID: 2054455041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1472220357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472220351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75126a90ed68f4b4d8a7ed7ad510a3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1501895321 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5532235739179982029, guid: 8b726a9375ea2e442aa068972abf0c08, type: 3}
@@ -10325,7 +10342,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6823514911845408415, guid: 4e003f52211472a4ea85629eb66ba330, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1095287911}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7962338504253746782, guid: 4e003f52211472a4ea85629eb66ba330, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1472220357}
   m_SourcePrefab: {fileID: 100100000, guid: 4e003f52211472a4ea85629eb66ba330, type: 3}
 --- !u!1001 &2061929165
 PrefabInstance:
