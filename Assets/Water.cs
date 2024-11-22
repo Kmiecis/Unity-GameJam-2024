@@ -3,6 +3,8 @@ using UnityEngine;
 public class Water : MonoBehaviour
 {
     public GameObject electricEffectPrefab;
+    public Transform targetSocket;
+
     private bool isElectrified = false;
 
     public void Electrify()
@@ -12,7 +14,7 @@ public class Water : MonoBehaviour
             isElectrified = true;
             if (electricEffectPrefab != null)
             {
-                Instantiate(electricEffectPrefab, transform.position, Quaternion.identity);
+                Instantiate(electricEffectPrefab, targetSocket, false);
             }
         }
     }
