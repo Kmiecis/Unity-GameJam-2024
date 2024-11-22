@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleEffect : MonoBehaviour
+namespace Game
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ParticleEffect : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private ParticleSystem _particles;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Spawn(Component component)
+        {
+            var instance = Instantiate(_particles);
+
+            if (instance.TryGetComponent<Transform>(out var targetTransform))
+            {
+                targetTransform.position = component.transform.position;
+            }
+        }
     }
 }

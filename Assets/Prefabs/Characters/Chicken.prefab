@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 5281306868204250455}
   - component: {fileID: 4318254220841992770}
   - component: {fileID: 8685105924753549594}
+  - component: {fileID: 8793045711077053221}
   - component: {fileID: 5397346549072148201}
   m_Layer: 0
   m_Name: Cube
@@ -368,6 +369,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8793045711077053221}
+        m_TargetAssemblyTypeName: Game.SpawnEffect, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7047102579155443692}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Component, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 5397346549072148201}
         m_TargetAssemblyTypeName: Game.DestroyEffect, Assembly-CSharp
         m_MethodName: Destroy
@@ -393,6 +406,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 7962338504253746782, guid: 0ea6e64834d5f824482f18a8b79f7864, type: 3}
+--- !u!114 &8793045711077053221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365326394808919084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0d10631edcea14cb68489228fe6fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 567978991558876604, guid: 3209faf923692e74880a97de337472e5, type: 3}
 --- !u!114 &5397346549072148201
 MonoBehaviour:
   m_ObjectHideFlags: 0

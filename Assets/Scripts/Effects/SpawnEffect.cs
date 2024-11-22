@@ -20,6 +20,7 @@ namespace Game
             {
                 targetTransform.position = component.transform.position;
             }
+
             if (instance.TryGetComponent<Rigidbody>(out var targetRigidbody))
             {
                 if (component is NavMeshAgent sourceAgent)
@@ -29,6 +30,18 @@ namespace Game
                 else if (component is Rigidbody sourceRigidbody)
                 {
                     targetRigidbody.velocity = sourceRigidbody.velocity;
+                }
+            }
+
+            if (instance.TryGetComponent<TranslateComponent>(out var targetTranslate))
+            {
+                if (component is NavMeshAgent sourceAgent)
+                {
+                    targetTranslate.velocity = sourceAgent.velocity;
+                }
+                else if (component is Rigidbody sourceRigidbody)
+                {
+                    targetTranslate.velocity = sourceRigidbody.velocity;
                 }
             }
         }
