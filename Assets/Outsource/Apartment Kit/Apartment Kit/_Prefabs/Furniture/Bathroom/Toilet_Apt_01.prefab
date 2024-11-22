@@ -499,6 +499,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5673664553544819163, guid: 01b52b412e13fc74fa3ad6452948bf38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 203830799646525225}
+    - targetCorrespondingSourceObject: {fileID: 5673664553544819163, guid: 01b52b412e13fc74fa3ad6452948bf38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1711989807929462756}
   m_SourcePrefab: {fileID: 100100000, guid: 01b52b412e13fc74fa3ad6452948bf38, type: 3}
 --- !u!1 &4253976071339233902 stripped
 GameObject:
@@ -532,6 +535,18 @@ MonoBehaviour:
           m_StringArgument: SkibidiOpen
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1711989807929462756}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onUnclicked:
     m_PersistentCalls:
       m_Calls:
@@ -547,6 +562,32 @@ MonoBehaviour:
           m_StringArgument: SkibidiClose
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1711989807929462756}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SkibidiClose
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1711989807929462756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253976071339233902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1fbabcfb9e95e40817445a78755965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: f8157af77b106ca4781710e5ab8e72a1, type: 2}
+  _playOnStart: 0
 --- !u!4 &5200563687765095590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4438810311711311635, guid: 01b52b412e13fc74fa3ad6452948bf38, type: 3}

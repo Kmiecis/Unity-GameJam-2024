@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4438810311711311635}
   - component: {fileID: 3575489294491157696}
-  - component: {fileID: 928094388312021671}
+  - component: {fileID: 8061181500771428282}
   - component: {fileID: 4370666229251459787}
   m_Layer: 0
-  m_Name: Click
+  m_Name: ClickSwitchHover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &928094388312021671
+--- !u!114 &8061181500771428282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,10 +65,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5673664553544819163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71ecb69255d2bb84a8ea9a1dc06d5e17, type: 3}
+  m_Script: {fileID: 11500000, guid: 9432c4ee54412c346a2b13824bf179cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _onClicked:
+    m_PersistentCalls:
+      m_Calls: []
+  _onUnclicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &4370666229251459787

@@ -15,6 +15,11 @@ namespace Game
             _manager.PlaySound(_sound);
         }
 
+        public void Stop()
+        {
+            _manager.StopSound(_sound);
+        }
+
         private void Awake()
         {
             DI_Binder.Bind(this);

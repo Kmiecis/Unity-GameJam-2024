@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5971b5ee61eb1c84c9cc662cd685334f, type: 3}
-  m_Name: background
+  m_Name: skibidi-toilet
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 754f85a41c2b68c4db60314bf6520791, type: 3}
+  clip: {fileID: 8300000, guid: 00b2149535c9c984b8154b46dd694e52, type: 3}
   volume:
-    min: 0.5
-    max: 0.5
+    min: 1
+    max: 1
   pitch:
     min: 1
     max: 1
-  loop: 1
+  loop: 0
