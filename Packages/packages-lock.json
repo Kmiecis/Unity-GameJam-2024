@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e70f40d858c29f583f6a4652601f2f6db438996a"
+      "hash": "e817d2e686e66e0c87ed6e784513728b7e4c2acd"
     },
     "com.kmiecis.cosequencer": {
       "version": "https://github.com/Kmiecis/Unity-Package-CoSequencer.git",

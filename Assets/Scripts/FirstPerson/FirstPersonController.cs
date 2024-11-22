@@ -26,10 +26,21 @@ namespace Game
         protected FirstPersonJumping _jumping;
 
         private Vector2 _mouseAxis;
+        private int _enableFrame;
+
+        private bool IsEnabled
+        {
+            get => _enableFrame <= Time.frameCount;
+        }
+
+        private void OnEnable()
+        {
+            _enableFrame = Time.frameCount + 3;
+        }
 
         private void Update()
         {
-            if (!Cursor.visible || Cursor.lockState != CursorLockMode.None)
+            if (IsEnabled)
             {
                 _camera.Rotate(
                     Input.GetAxisRaw(mouseAxisXName),
@@ -47,6 +58,11 @@ namespace Game
                     _jumping.TryJump();
                 }
             }
+        }
+
+        private void OnDisable()
+        {
+            _enableFrame = int.MaxValue;
         }
     }
 }

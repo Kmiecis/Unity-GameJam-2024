@@ -224,7 +224,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6894007759386616708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64fe2cd5c6d81db45bb4255e9e253d59, type: 3}
   m_Name: 
@@ -333,6 +333,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockKey: 323
   releaseKey: 27
+  enables:
+  - {fileID: 5733332219779769266}
+  - {fileID: 1026534605762043295}
 --- !u!1 &7595691991415712523
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +347,6 @@ GameObject:
   - component: {fileID: 6646432205692375288}
   - component: {fileID: 6324411013139312398}
   - component: {fileID: 5858522616644004038}
-  - component: {fileID: 1097250494179805056}
   - component: {fileID: 1026534605762043295}
   m_Layer: 0
   m_Name: Camera
@@ -427,22 +429,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7595691991415712523}
   m_Enabled: 1
---- !u!114 &1097250494179805056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7595691991415712523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c49b4cc203aa6414fae5c798d1d0e7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EventMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_MaxRayIntersections: 0
 --- !u!114 &1026534605762043295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,7 +436,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7595691991415712523}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d89b61e288f165e4c8604401e2dfe928, type: 3}
   m_Name: 
@@ -458,4 +444,5 @@ MonoBehaviour:
   _eventMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  _eventDistance: 2
   _eventIntersections: 10

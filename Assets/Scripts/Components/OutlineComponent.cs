@@ -14,7 +14,7 @@ namespace Game
 
         public void FadeIn()
         {
-            if (++_highlights == 1)
+            if (++_highlights == 1 && gameObject.activeInHierarchy)
             {
                 _applier.ApplyClone();
 
@@ -26,7 +26,7 @@ namespace Game
 
         public void FadeOut()
         {
-            if (--_highlights == 0)
+            if (--_highlights == 0 && gameObject.activeInHierarchy)
             {
                 _faderoutine.Stop(this);
                 _faderoutine = Yield.ValueTo(1.0f, 0.0f, _alpha.SetValue, Yield.TimeNormalized(0.15f))
