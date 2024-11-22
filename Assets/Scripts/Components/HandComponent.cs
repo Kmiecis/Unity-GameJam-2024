@@ -27,25 +27,9 @@ namespace Game
             _openObject.SetActive(false);
         }
 
-        public void HideOpen()
-        {
-            _openObject.SetActive(false);
-        }
-
-        public void HideClosed()
-        {
-            _closedObject.SetActive(false);
-        }
-
         private void Awake()
         {
             DI_Binder.Bind(this);
-        }
-
-        private void OnEnable()
-        {
-            HideOpen();
-            HideClosed();
         }
 
         private void Update()
@@ -66,13 +50,9 @@ namespace Game
             }
             else
             {
-                if (IsOpen)
-                {
-                    HideOpen();
-                }
                 if (IsClosed)
                 {
-                    HideClosed();
+                    ShowOpen();
                 }
             }
         }
