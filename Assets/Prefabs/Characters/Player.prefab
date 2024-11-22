@@ -445,7 +445,7 @@ MonoBehaviour:
   _eventMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  _eventDistance: 2
+  _eventDistance: 3
   _eventIntersections: 10
 --- !u!114 &813258168471912861
 MonoBehaviour:
