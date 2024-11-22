@@ -31,7 +31,7 @@ namespace Game
         private void ApplyForce()
         {
             var delta = _target - transform.position;
-            _rigidbody.AddForce(delta * _force, ForceMode.Force);
+            _rigidbody.AddForce(delta * _force * _rigidbody.mass, ForceMode.Force);
 
             var velocityTime = Mathf.Clamp01(delta.magnitude / _offset.magnitude);
             var velocity = _velocityCurve.Evaluate(velocityTime);
