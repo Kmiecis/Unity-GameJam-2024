@@ -86,6 +86,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottles 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9067514655603850387, guid: 1d0d4b8bd8a8d3545ba886eb01039eb3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.229
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
