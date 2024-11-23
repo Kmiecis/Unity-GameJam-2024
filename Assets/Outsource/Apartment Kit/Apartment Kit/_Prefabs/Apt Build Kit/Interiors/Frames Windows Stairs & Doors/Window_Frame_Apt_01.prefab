@@ -228,6 +228,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _clicked: 0
 --- !u!114 &3147092433787436537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sound: {fileID: 11400000, guid: d7653d1b26365e7448109d60452da94c, type: 2}
-  _playOnStart: 1
+  _playOnStart: 0
 --- !u!1 &2633268593446484574
 GameObject:
   m_ObjectHideFlags: 0
