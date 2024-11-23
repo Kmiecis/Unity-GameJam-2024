@@ -115,9 +115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Click to play
-
-'
+  m_text: Click to play...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 783f3f75b76e39f42a02df4572181a1b, type: 2}
   m_sharedMaterial: {fileID: 2188690665043416991, guid: 783f3f75b76e39f42a02df4572181a1b, type: 2}
@@ -144,13 +142,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
