@@ -1,5 +1,6 @@
 using Common.Injection;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Game
@@ -23,6 +24,11 @@ namespace Game
         public float Timeleft
         {
             get => _tasksTime - (Time.realtimeSinceStartup - _starttime);
+        }
+
+        public bool IsCompleted
+        {
+            get => _tasks.All(t => t.IsCompleted);
         }
 
         private void StartTimer()
