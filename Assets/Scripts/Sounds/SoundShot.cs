@@ -11,7 +11,9 @@ namespace Game
 
         public void ShotSound()
         {
-            _manager.PlaySound(_sound);
+            var sound = _manager.PlaySound(_sound);
+
+            sound.transform.position = transform.position;
 
             Destroy(this);
         }
