@@ -45,5 +45,10 @@ namespace Game
         {
             DI_Binder.Unbind(this);
         }
+
+        private void OnDestroy()
+        {
+            SetCursorState(false);
+        }
     }
 }
