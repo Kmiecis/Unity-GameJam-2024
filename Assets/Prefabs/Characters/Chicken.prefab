@@ -234,6 +234,8 @@ GameObject:
   - component: {fileID: 8793045711077053221}
   - component: {fileID: 5964466241386073295}
   - component: {fileID: 5397346549072148201}
+  - component: {fileID: 5210558580388567607}
+  - component: {fileID: 7998321773461538314}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -393,6 +395,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5210558580388567607}
+        m_TargetAssemblyTypeName: Game.SoundShot, Assembly-CSharp
+        m_MethodName: ShotSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7998321773461538314}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8793045711077053221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,6 +457,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b462aaaf9ccd0da4a8f641d502850125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5210558580388567607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365326394808919084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a9ceee2a3638c4ebea808c617eeb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: 309405d328342934bbead3040901199f, type: 2}
+--- !u!114 &7998321773461538314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2365326394808919084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1fbabcfb9e95e40817445a78755965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: 3b93b3afa29c6e64798e02b44981422f, type: 2}
+  _playOnStart: 1
 --- !u!1 &2573813297145236389
 GameObject:
   m_ObjectHideFlags: 0

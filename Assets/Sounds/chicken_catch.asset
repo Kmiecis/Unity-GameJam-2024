@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5971b5ee61eb1c84c9cc662cd685334f, type: 3}
-  m_Name: oven
+  m_Name: chicken_catch
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: d9ffb0356966a9449a9077dace993dd0, type: 3}
+  clip: {fileID: 8300000, guid: d59b94e65784cff4f9d6ec4ea1749e26, type: 3}
   volume:
     min: 1
     max: 1
