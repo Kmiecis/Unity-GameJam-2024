@@ -7,8 +7,7 @@ namespace Game
     public class MouseClickSwitchHandler : MouseClickHandler
     {
         [SerializeField] protected UnityEvent<MouseEventData> _onUnclicked = new UnityEvent<MouseEventData>();
-
-        private bool _clicked;
+        [SerializeField] private bool _clicked;
 
         public UnityEvent<MouseEventData> OnUnclicked
             => _onUnclicked;

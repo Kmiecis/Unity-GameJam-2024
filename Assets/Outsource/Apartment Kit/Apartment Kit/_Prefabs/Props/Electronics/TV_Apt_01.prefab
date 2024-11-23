@@ -116,7 +116,6 @@ GameObject:
   - component: {fileID: 6137060648078561210}
   - component: {fileID: 35934329165900605}
   - component: {fileID: 5218734965310417284}
-  - component: {fileID: 9220030667051134403}
   - component: {fileID: 6511185284980321593}
   - component: {fileID: 1036866338419552002}
   m_Layer: 0
@@ -170,8 +169,6 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 4cd790ac0d37bdc46970f6688c6b5070, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -193,20 +190,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9220030667051134403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8564461849130234699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a731a313d4b07f4fbd3b13949d9323e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _video: {fileID: 11400000, guid: d804a09bb92abda44a8f720b5599e251, type: 2}
-  _playOnStart: 1
 --- !u!114 &6511185284980321593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8564461849130234699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dcc58d27d9fae54d87345e010bf1afc, type: 3}
   m_Name: 
@@ -418,10 +401,6 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8061181500771428282, guid: 19872c23a2adf59479261c0ee01effbc, type: 3}
-      propertyPath: _onClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 9220030667051134403}
-    - target: {fileID: 8061181500771428282, guid: 19872c23a2adf59479261c0ee01effbc, type: 3}
       propertyPath: _onClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1036866338419552002}
@@ -433,10 +412,6 @@ PrefabInstance:
       propertyPath: _onUnclicked.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 8061181500771428282, guid: 19872c23a2adf59479261c0ee01effbc, type: 3}
-      propertyPath: _onUnclicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 9220030667051134403}
     - target: {fileID: 8061181500771428282, guid: 19872c23a2adf59479261c0ee01effbc, type: 3}
       propertyPath: _onUnclicked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
