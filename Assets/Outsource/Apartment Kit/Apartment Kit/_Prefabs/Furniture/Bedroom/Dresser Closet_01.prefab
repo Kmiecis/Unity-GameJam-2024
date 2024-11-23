@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 5386436854384878192}
   - component: {fileID: 884678603531647137}
   - component: {fileID: 3393529623708164078}
+  - component: {fileID: 7895623762491588870}
   m_Layer: 0
   m_Name: Door.R
   m_TagString: Untagged
@@ -422,6 +423,18 @@ MonoBehaviour:
           m_StringArgument: Opening 1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7895623762491588870}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Opening 1
+          m_BoolArgument: 0
+        m_CallState: 2
   _onUnclicked:
     m_PersistentCalls:
       m_Calls:
@@ -437,6 +450,33 @@ MonoBehaviour:
           m_StringArgument: Closing 1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7895623762491588870}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Closing 1
+          m_BoolArgument: 0
+        m_CallState: 2
+  _clicked: 0
+--- !u!114 &7895623762491588870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5386436854384878198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1fbabcfb9e95e40817445a78755965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: 95e47e0664bbbca4c8de4301cb6f14e0, type: 2}
+  _playOnStart: 0
 --- !u!1 &5478849095728045706
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +576,7 @@ GameObject:
   - component: {fileID: 5483040691484923751}
   - component: {fileID: 2664769990041046082}
   - component: {fileID: 115852687918592255}
+  - component: {fileID: 5121184099102877347}
   m_Layer: 0
   m_Name: Door.L
   m_TagString: Untagged
@@ -694,6 +735,18 @@ MonoBehaviour:
           m_StringArgument: Opening
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5121184099102877347}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Opening
+          m_BoolArgument: 0
+        m_CallState: 2
   _onUnclicked:
     m_PersistentCalls:
       m_Calls:
@@ -709,6 +762,19 @@ MonoBehaviour:
           m_StringArgument: Closing
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5121184099102877347}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Closing
+          m_BoolArgument: 1
+        m_CallState: 2
+  _clicked: 0
 --- !u!114 &115852687918592255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +789,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5483040691484923750}
   _state: 
+--- !u!114 &5121184099102877347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5483040691484923748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1fbabcfb9e95e40817445a78755965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: 95e47e0664bbbca4c8de4301cb6f14e0, type: 2}
+  _playOnStart: 0
 --- !u!1 &7357539887146149274
 GameObject:
   m_ObjectHideFlags: 0
