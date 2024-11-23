@@ -43,8 +43,8 @@ namespace Game
             if (IsEnabled)
             {
                 _camera.Rotate(
-                    Input.GetAxisRaw(mouseAxisXName),
-                    Input.GetAxisRaw(mouseAxisYName)
+                    Input.GetAxis(mouseAxisXName),
+                    Input.GetAxis(mouseAxisYName)
                 );
                 _movement.Move(
                     Input.GetAxisRaw(moveAxisXName),
