@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 771466706}
   - component: {fileID: 8467020488712331240}
   - component: {fileID: 2660890998660259632}
+  - component: {fileID: 3147092433787436537}
   m_Layer: 0
   m_Name: Window_01
   m_TagString: Untagged
@@ -188,6 +189,18 @@ MonoBehaviour:
           m_StringArgument: Openingwindow
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3147092433787436537}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onUnclicked:
     m_PersistentCalls:
       m_Calls:
@@ -203,6 +216,32 @@ MonoBehaviour:
           m_StringArgument: Closingwindow
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3147092433787436537}
+        m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3147092433787436537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2503783858467847972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1fbabcfb9e95e40817445a78755965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: d7653d1b26365e7448109d60452da94c, type: 2}
+  _playOnStart: 1
 --- !u!1 &2633268593446484574
 GameObject:
   m_ObjectHideFlags: 0
