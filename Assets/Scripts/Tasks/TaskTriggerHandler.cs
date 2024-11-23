@@ -7,7 +7,7 @@ namespace Game
     {
         [SerializeField] private TaskController _controller;
 
-        private void OnTaskTrigger(Collider collider)
+        private void OnTaskTriggerEnter(Collider collider)
         {
             if (collider.TryGetComponent<TaskAction>(out var action))
             {
@@ -15,9 +15,18 @@ namespace Game
             }
         }
 
+        private void OnTaskTriggerExit(Collider collider)
+        {
+            if (collider.TryGetComponent<TaskAction>(out var action))
+            {
+                _controller.RevokeAction(action);
+            }
+        }
+
         private void Awake()
         {
-            _onTriggerEnter.AddListener(OnTaskTrigger);
+            _onTriggerEnter.AddListener(OnTaskTriggerEnter);
+            _onTriggerExit.AddListener(OnTaskTriggerExit);
         }
     }
 }

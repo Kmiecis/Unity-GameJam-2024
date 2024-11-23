@@ -9,6 +9,10 @@ namespace Game
     public class TaskController : TaskAction
     {
         [SerializeField] private UnityEvent<TaskAction> _onComplete = new UnityEvent<TaskAction>();
+        [SerializeField] private UnityEvent<TaskAction> _onIncomplete = new UnityEvent<TaskAction>();
+        [SerializeField] private UnityEvent<TaskAction> _onProgress = new UnityEvent<TaskAction>();
+        [SerializeField] private UnityEvent<TaskAction> _onDeprogress = new UnityEvent<TaskAction>();
+        [Space]
         [SerializeField] private TaskAction[] _possibleActions;
         [SerializeField] private int _requiredCount;
         [SerializeField] private string _description;
@@ -22,6 +26,26 @@ namespace Game
             get => _onComplete;
         }
 
+        public UnityEvent<TaskAction> OnIncomplete
+        {
+            get => _onIncomplete;
+        }
+
+        public UnityEvent<TaskAction> OnProgress
+        {
+            get => _onProgress;
+        }
+
+        public UnityEvent<TaskAction> OnDeprogres
+        {
+            get => _onDeprogress;
+        }
+
+        public bool IsCompleted
+        {
+            get => _completed.Count == _requiredCount;
+        }
+
         public string Description
         {
             get => _description;
@@ -29,13 +53,30 @@ namespace Game
 
         public void CompleteAction(TaskAction action)
         {
-            if (_possibleActions.Contains(action))
+            if (_possibleActions.Contains(action) && !_completed.Contains(action))
             {
                 _completed.Add(action);
+
+                _onProgress.Invoke(action);
 
                 if (_completed.Count == _requiredCount)
                 {
                     _onComplete.Invoke(this);
+                }
+            }
+        }
+
+        public void RevokeAction(TaskAction action)
+        {
+            if (_completed.Contains(action))
+            {
+                _completed.Remove(action);
+
+                _onDeprogress.Invoke(action);
+
+                if (_completed.Count < _requiredCount)
+                {
+                    _onIncomplete.Invoke(this);
                 }
             }
         }
