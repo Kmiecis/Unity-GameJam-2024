@@ -1,8 +1,10 @@
+using Game;
 using UnityEngine;
 
 public class Water : MonoBehaviour
 {
     public GameObject electricEffectPrefab;
+    public SoundShot electricShot;
     public Transform targetSocket;
 
     private bool isElectrified = false;
@@ -15,6 +17,7 @@ public class Water : MonoBehaviour
             if (electricEffectPrefab != null)
             {
                 Instantiate(electricEffectPrefab, targetSocket, false);
+                electricShot.ShotSound();
             }
         }
     }

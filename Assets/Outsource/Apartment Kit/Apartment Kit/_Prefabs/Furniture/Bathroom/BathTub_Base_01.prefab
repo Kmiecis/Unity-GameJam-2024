@@ -201,6 +201,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 954630265507419600}
+  - component: {fileID: 8881149413109898372}
   m_Layer: 0
   m_Name: LightningSocket
   m_TagString: Untagged
@@ -223,6 +224,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9160075805504388056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8881149413109898372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077013665870134988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a9ceee2a3638c4ebea808c617eeb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: e87d1ca64e6d3724fb5bc53c6d9f422d, type: 2}
 --- !u!1 &6167774271391052860
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,4 +356,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electricEffectPrefab: {fileID: 285656054538791525, guid: dc0dcd1aa86e1e74c94eafd8a4beb5c7, type: 3}
+  electricShot: {fileID: 8881149413109898372}
   targetSocket: {fileID: 954630265507419600}
