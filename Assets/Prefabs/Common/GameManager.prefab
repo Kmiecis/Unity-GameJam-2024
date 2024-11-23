@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4cf942df4a6fe42871efb363238ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tasksCount: 10
+  _tasksCount: 1
   _tasksTime: 300

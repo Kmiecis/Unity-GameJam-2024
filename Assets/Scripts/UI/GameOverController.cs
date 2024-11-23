@@ -18,7 +18,7 @@ namespace Game
 
         private void CheckTimeleft(float timeleft, bool completed)
         {
-            if (timeleft < 0.0f)
+            if (timeleft < 0.0f || completed)
             {
                 _fade.Build()
                     .With(Yield.ValueTo(_sounds.Volume, 0.0f, v => _sounds.Volume = v, Yield.TimeNormalized(_fade.duration)))
