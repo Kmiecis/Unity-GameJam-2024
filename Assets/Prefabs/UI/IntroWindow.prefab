@@ -588,12 +588,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3875989325082044305}
   - component: {fileID: 1654430746441540702}
-  - component: {fileID: 8372840096670017676}
   - component: {fileID: 5825670386473757960}
   - component: {fileID: 7120418986290710997}
   - component: {fileID: 6525672333789949779}
   - component: {fileID: 5484028371146900811}
   - component: {fileID: 2980085077955996519}
+  - component: {fileID: 4878065007375770933}
   m_Layer: 5
   m_Name: IntroWindow
   m_TagString: Untagged
@@ -653,29 +653,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &8372840096670017676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5480883096168626303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
 --- !u!114 &5825670386473757960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +811,22 @@ MonoBehaviour:
   - {fileID: 3746402700563157545}
   - {fileID: 6489029149395264713}
   - {fileID: 955112990091649992}
+--- !u!114 &4878065007375770933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5480883096168626303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9a2d663307634592d298faf4a0826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scene:
+    _value: {fileID: 102900000, guid: 847a88e9dcd2b48168d5dff15e19f2aa, type: 3}
+    _path: Assets/Scenes/Interior
+    _extension: .unity
 --- !u!1 &5944221172812938648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1269,10 +1262,22 @@ PrefabInstance:
     - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 5480883096168626303}
+      objectReference: {fileID: 4878065007375770933}
     - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Game.ScenePlayComponent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060203738281196660, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4254321772587951653, guid: 782d7d6616c374393a267d77855ce38a, type: 3}
       propertyPath: m_Pivot.x
