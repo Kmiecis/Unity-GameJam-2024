@@ -38,7 +38,11 @@ namespace Game
         {
             var player = _sources.Borrow();
 
+#if UNITY_WEBGL
+            player.url = System.IO.Path.Combine(Application.streamingAssetsPath, data.clip.name + ".mp4");
+#else
             player.clip = data.clip;
+#endif
             player.SetDirectAudioVolume(0, Random.Range(data.volume.min, data.volume.max) * _volume);
             player.isLooping = data.loop;
             player.SetDirectAudioMute(0, _muted);
