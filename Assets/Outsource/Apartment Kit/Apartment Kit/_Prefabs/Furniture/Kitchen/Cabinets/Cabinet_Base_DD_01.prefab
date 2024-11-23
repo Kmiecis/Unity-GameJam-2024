@@ -187,6 +187,18 @@ MonoBehaviour:
           m_StringArgument: Opening
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2379933181721232477}
+        m_TargetAssemblyTypeName: Game.SoundShot, Assembly-CSharp
+        m_MethodName: ShotSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Opening
+          m_BoolArgument: 0
+        m_CallState: 2
   _onUnclicked:
     m_PersistentCalls:
       m_Calls:
@@ -504,6 +516,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7388128883202984669}
         m_TargetAssemblyTypeName: Game.SoundEffect, Assembly-CSharp
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Opening 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2379933181721232477}
+        m_TargetAssemblyTypeName: Game.SoundShot, Assembly-CSharp
+        m_MethodName: ShotSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -852,6 +876,7 @@ GameObject:
   - component: {fileID: 1301579752222099146}
   - component: {fileID: 5255125124023480174}
   - component: {fileID: 2305463942451076359}
+  - component: {fileID: 2379933181721232477}
   m_Layer: 0
   m_Name: Cabinet_Base_DD_01
   m_TagString: Untagged
@@ -950,6 +975,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8955122113573362361, guid: 2a83511a782a6aa4dafed1f5a2bd3803, type: 3}
+--- !u!114 &2379933181721232477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5262956300232747728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a9ceee2a3638c4ebea808c617eeb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sound: {fileID: 11400000, guid: 2fd15126abb4e0340be1e3da94f7615d, type: 2}
 --- !u!1 &8051497628472091917
 GameObject:
   m_ObjectHideFlags: 0
