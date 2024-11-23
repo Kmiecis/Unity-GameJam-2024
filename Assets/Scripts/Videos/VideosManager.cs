@@ -195,7 +195,7 @@ namespace Game
                     var sample = _playing[i];
 
                     var distance = Vector3.Distance(sample.player.transform.position, listener.transform.position);
-                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance)) * _volume;
+                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance)) * sample.volume * _volume;
 
                     sample.player.SetDirectAudioVolume(0, volume);
                 }
