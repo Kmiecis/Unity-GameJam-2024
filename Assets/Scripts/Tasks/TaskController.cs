@@ -9,13 +9,18 @@ namespace Game
     public class TaskController : TaskAction
     {
         [SerializeField] private UnityEvent<TaskAction> _onComplete = new UnityEvent<TaskAction>();
-        [SerializeField] private TaskAction[] _completeActions;
-        [SerializeField] private int _completeTarget;
+        [SerializeField] private TaskAction[] _requiredActions;
+        [SerializeField] private int _requiredTarget;
         [SerializeField] private string _description;
 
-        [DI_Inject] private TasksController _controller;
+        [DI_Inject(nameof(OnTasksControllerInject))] private TasksController _controller;
 
         private List<TaskAction> _completed = new List<TaskAction>();
+
+        public UnityEvent<TaskAction> OnComplete
+        {
+            get => _onComplete;
+        }
 
         public string Description
         {
@@ -24,11 +29,11 @@ namespace Game
 
         public void CompleteAction(TaskAction action)
         {
-            if (_completeActions.Contains(action))
+            if (_requiredActions.Contains(action))
             {
                 _completed.Add(action);
 
-                if (_completeActions.Length == _completeTarget)
+                if (_requiredActions.Length == _requiredTarget)
                 {
                     _onComplete.Invoke(this);
                 }

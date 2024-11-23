@@ -12,6 +12,13 @@ namespace Game.UI
         {
             _doneObject.SetActive(false);
             _descriptionText.text = task.Description;
+
+            task.OnComplete.AddListener(OnComplete);
+        }
+
+        private void OnComplete(TaskAction action)
+        {
+            _doneObject.SetActive(true);
         }
     }
 }

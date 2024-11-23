@@ -48,8 +48,9 @@ MonoBehaviour:
   _onComplete:
     m_PersistentCalls:
       m_Calls: []
-  _actions: []
-  _target: 1
+  _requiredActions: []
+  _requiredTarget: 0
+  _description: 
 --- !u!1 &5242420373865082921
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4885442269361436275}
   - component: {fileID: 6157969051483479110}
-  - component: {fileID: 9002878832718648218}
+  - component: {fileID: 8225458208554013490}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -104,7 +105,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9002878832718648218
+--- !u!114 &8225458208554013490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5242420373865082921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3abd1e44298e0c448f3ff806e46b852, type: 3}
+  m_Script: {fileID: 11500000, guid: 913e5588f73ff57498e223ae3bd9dcd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _onTriggerEnter:
@@ -125,3 +126,4 @@ MonoBehaviour:
   _onTriggerExit:
     m_PersistentCalls:
       m_Calls: []
+  _controller: {fileID: 69276537518640728}

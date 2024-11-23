@@ -7,7 +7,7 @@ namespace Game
     [DI_Install]
     public class TasksController : MonoBehaviour
     {
-        private List<TaskController> _tasks = new List<TaskController>();
+        [SerializeField] private List<TaskController> _tasks = new List<TaskController>();
 
         public List<TaskController> AllTasks
         {

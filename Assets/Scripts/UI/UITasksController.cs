@@ -1,4 +1,6 @@
+using Common;
 using Common.Coroutines;
+using Common.Coroutines.Segments;
 using Common.Injection;
 using Common.Pooling;
 using System.Collections.Generic;
@@ -9,35 +11,39 @@ namespace Game.UI
     public class UITasksController : MonoBehaviour
     {
         [SerializeField] private ComponentPool<UITask> _tasksPool = new ComponentPool<UITask>();
-        [SerializeField] private Common.Coroutines.Segments.TransformMoveXSegment _showSegment;
-        [SerializeField] private Common.Coroutines.Segments.TransformMoveXSegment _hideSegment;
+        [SerializeField, Folded] private TransformMoveXSegment _showSegment;
+        [SerializeField, Folded] private TransformMoveXSegment _hideSegment;
 
         [DI_Inject] private GameController _gameController;
 
-        private List<UITask> _tasks = new List<UITask>();
+        private List<UITask> _tasks;
+        private bool _shown;
 
         private void ShowTaskList()
         {
-            var tasks = _gameController.CurrentTasks;
-            foreach (var task in tasks)
+            if (_tasks == null)
             {
-                var uiTask = _tasksPool.Borrow();
-                uiTask.Setup(task);
-                _tasks.Add(uiTask);
+                _tasks = new List<UITask>();
+
+                var tasks = _gameController.CurrentTasks;
+                foreach (var task in tasks)
+                {
+                    var uiTask = _tasksPool.Borrow();
+                    uiTask.Setup(task);
+                    _tasks.Add(uiTask);
+                }
             }
 
+            this.StopAllCoroutines();
             _showSegment.Build().Start(this);
+            _shown = true;
         }
 
         private void HideTaskList()
         {
-            foreach (var task in _tasks)
-            {
-                _tasksPool.Return(task);
-            }
-            _tasks.Clear();
-
+            this.StopAllCoroutines();
             _hideSegment.Build().Start(this);
+            _shown = false;
         }
 
         private void Awake()
@@ -49,7 +55,7 @@ namespace Game.UI
         {
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                if (_tasks.Count > 0)
+                if (_shown)
                 {
                     HideTaskList();
                 }
