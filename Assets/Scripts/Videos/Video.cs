@@ -10,6 +10,7 @@ namespace Game
         public VideoClip clip;
         public RenderTexture texture;
         public Range volume = new Range(1.0f, 1.0f);
+        public Range time = new Range(0.0f, 0.0f);
         public bool loop;
     }
 }

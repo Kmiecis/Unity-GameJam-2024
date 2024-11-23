@@ -15,6 +15,9 @@ MonoBehaviour:
   clip: {fileID: 32900000, guid: 332088f562f05ca48939dbf61f05a590, type: 3}
   texture: {fileID: 8400000, guid: 705776bcb529e9144873baf41d22bf60, type: 2}
   volume:
-    min: 1
+    min: 0.25
+    max: 0.5
+  time:
+    min: 0
     max: 1
   loop: 1
