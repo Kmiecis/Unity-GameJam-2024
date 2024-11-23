@@ -48,7 +48,8 @@ MonoBehaviour:
   _onComplete:
     m_PersistentCalls:
       m_Calls: []
-  _possibleActions: []
+  _possibleActions:
+  - {fileID: 0}
   _requiredCount: 0
   _description: 
 --- !u!1 &5242420373865082921
