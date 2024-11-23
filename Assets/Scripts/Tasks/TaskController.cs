@@ -9,8 +9,8 @@ namespace Game
     public class TaskController : TaskAction
     {
         [SerializeField] private UnityEvent<TaskAction> _onComplete = new UnityEvent<TaskAction>();
-        [SerializeField] private TaskAction[] _requiredActions;
-        [SerializeField] private int _requiredTarget;
+        [SerializeField] private TaskAction[] _possibleActions;
+        [SerializeField] private int _requiredCount;
         [SerializeField] private string _description;
 
         [DI_Inject(nameof(OnTasksControllerInject))] private TasksController _controller;
@@ -29,11 +29,11 @@ namespace Game
 
         public void CompleteAction(TaskAction action)
         {
-            if (_requiredActions.Contains(action))
+            if (_possibleActions.Contains(action))
             {
                 _completed.Add(action);
 
-                if (_requiredActions.Length == _requiredTarget)
+                if (_completed.Count == _requiredCount)
                 {
                     _onComplete.Invoke(this);
                 }
