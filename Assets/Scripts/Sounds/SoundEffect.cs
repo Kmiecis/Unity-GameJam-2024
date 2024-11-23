@@ -12,7 +12,9 @@ namespace Game
 
         public void Play()
         {
-            _manager.PlaySound(_sound);
+            var source = _manager.PlaySound(_sound);
+
+            source.transform.position = transform.position;
         }
 
         public void Stop()

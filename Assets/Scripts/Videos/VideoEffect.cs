@@ -12,7 +12,9 @@ namespace Game
 
         public void Play()
         {
-            _manager.PlayVideo(_video);
+            var player = _manager.PlayVideo(_video);
+
+            player.transform.position = transform.position;
         }
 
         public void Stop()
