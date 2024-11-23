@@ -140,9 +140,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Good morning, sweetheart!\nI hope you\u2019re up because I\u2019m on my
-    way home!\nBy the way, the house better look exactly like I left it. No surprises,
-    okay? See you soon!"
+  m_text: "Good morning, sweetheart. \nRemember we had an appointment today? I'm
+    on the way. \nAll right. See you soon. Love you."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 61467c5b5b1d94c488d5f60c1d42402f, type: 2}
   m_sharedMaterial: {fileID: 8063330204631598824, guid: 61467c5b5b1d94c488d5f60c1d42402f, type: 2}
@@ -944,7 +943,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fb4ac26808fbc4b73b568db102d67422, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 434dba0c806bd49ccaf6ffc76d339a41, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
