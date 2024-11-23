@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2634504302917451180}
   - component: {fileID: 1926422455796063608}
   - component: {fileID: 920078402005309127}
+  - component: {fileID: 2706975562848159843}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fade:
     _name: CanvasGroup - Fade - Towards
-    duration: 1
+    duration: 2
     easer:
       serializedVersion: 2
       m_Curve:
@@ -79,9 +80,9 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     canvas: {fileID: 1926422455796063608}
-    target: 0
-  _winScene: {fileID: 0}
-  _loseScene: {fileID: 0}
+    target: 1
+  _winScene: {fileID: 920078402005309127}
+  _loseScene: {fileID: 2706975562848159843}
 --- !u!225 &1926422455796063608
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -90,7 +91,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2683324580029163095}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -108,7 +109,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scene:
     _value: {fileID: 102900000, guid: f1108f2589d12ce4694027534d649bb3, type: 3}
-    _path: Assets/Scenes/GameOver
+    _path: Assets/Scenes/Win
+    _extension: .unity
+--- !u!114 &2706975562848159843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683324580029163095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9a2d663307634592d298faf4a0826, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scene:
+    _value: {fileID: 102900000, guid: 610677a1a12855d4eb6d73719bb15e2e, type: 3}
+    _path: Assets/Scenes/Lose
     _extension: .unity
 --- !u!1 &8644558629648515934
 GameObject:

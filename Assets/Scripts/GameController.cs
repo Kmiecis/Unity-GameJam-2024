@@ -28,7 +28,7 @@ namespace Game
 
         public bool IsCompleted
         {
-            get => _tasks.All(t => t.IsCompleted);
+            get => _tasks != null && _tasks.All(t => t.IsCompleted);
         }
 
         private void StartTimer()

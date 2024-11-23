@@ -12,13 +12,17 @@ namespace Game
         [SerializeField] private ScenePlayComponent _winScene;
         [SerializeField] private ScenePlayComponent _loseScene;
 
-        [DI_Inject] private GameController _gameController;
+        [DI_Inject] private GameController _game;
+        [DI_Inject] private SoundsManager _sounds;
+        [DI_Inject] private VideosManager _videos;
 
         private void CheckTimeleft(float timeleft, bool completed)
         {
             if (timeleft < 0.0f)
             {
                 _fade.Build()
+                    .With(Yield.ValueTo(_sounds.Volume, 0.0f, v => _sounds.Volume = v, Yield.TimeNormalized(_fade.duration)))
+                    .With(Yield.ValueTo(_videos.Volume, 0.0f, v => _videos.Volume = v, Yield.TimeNormalized(_fade.duration)))
                     .Then(() => LoadScene(completed))
                     .Start(this);
             }
@@ -43,7 +47,7 @@ namespace Game
 
         private void Update()
         {
-            CheckTimeleft(_gameController.Timeleft, _gameController.IsCompleted);
+            CheckTimeleft(_game.Timeleft, _game.IsCompleted);
         }
     }
 }

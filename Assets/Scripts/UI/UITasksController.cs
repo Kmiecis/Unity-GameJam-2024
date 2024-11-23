@@ -51,6 +51,11 @@ namespace Game.UI
             DI_Binder.Bind(this);
         }
 
+        private void Start()
+        {
+            ShowTaskList();
+        }
+
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Tab))

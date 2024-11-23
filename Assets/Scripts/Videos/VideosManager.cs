@@ -33,7 +33,7 @@ namespace Game
         public float Volume
         {
             get => _volume;
-            set { _volume = value; ApplyVolume(); }
+            set { _volume = value; }
         }
 
         public AudioListener Listener
@@ -195,7 +195,7 @@ namespace Game
                     var sample = _playing[i];
 
                     var distance = Vector3.Distance(sample.player.transform.position, listener.transform.position);
-                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance));
+                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance)) * _volume;
 
                     sample.player.SetDirectAudioVolume(0, volume);
                 }

@@ -17,10 +17,10 @@ namespace Game
         public void SetTime(float time)
         {
             var timeleft = (int)time;
-            if (_timeleft != timeleft)
+            if (timeleft > -1 && timeleft != _timeleft)
             {
                 var timespan = TimeSpan.FromSeconds(timeleft);
-                var text = $"{timespan.Minutes}:{timespan.Seconds}";
+                var text = $"{timespan.Minutes:D2}:{timespan.Seconds:D2}";
                 _timeText.text = text;
 
                 _timeleft = timeleft;
