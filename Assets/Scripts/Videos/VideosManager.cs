@@ -16,14 +16,16 @@ namespace Game
         {
             public VideoPlayer player;
             public Video data;
+            public float volume;
             public Action onFinish;
             public float muter;
         }
 
-        [SerializeField]
-        private ComponentPool<VideoPlayer> _sources = new();
-        [Range(0.0f, 1.0f), SerializeField]
-        private float _volume = 1.0f;
+        [SerializeField] private AudioListener _listener;
+        [SerializeField] private ComponentPool<VideoPlayer> _sources = new();
+        [SerializeField, Range(0.0f, 1.0f)] private float _volume = 1.0f;
+        [SerializeField] private float _volumeDistance = 80.0f;
+        [SerializeField] private AnimationCurve _volumeCurve = AnimationCurve.EaseInOut(0.0f, 1.0f, 1.0f, 0.0f);
 
         private List<Sample> _playing = new();
         private bool _muted = false;
@@ -34,9 +36,20 @@ namespace Game
             set { _volume = value; ApplyVolume(); }
         }
 
+        public AudioListener Listener
+        {
+            get => _listener == null ? (_listener = FindObjectOfType<AudioListener>()) : _listener;
+        }
+
         public VideoPlayer PlayVideo(Video data, Action onFinish = null)
         {
             var player = _sources.Borrow();
+            var sample = new Sample {
+                player = player,
+                data = data,
+                volume = Random.Range(data.volume.min, data.volume.max),
+                onFinish = onFinish
+            };
 
 #if UNITY_WEBGL && !UNITY_EDITOR
             player.url = System.IO.Path.Combine(Application.streamingAssetsPath, data.clip.name + ".mp4");
@@ -44,13 +57,13 @@ namespace Game
             player.clip = data.clip;
             player.time = data.clip.length * Random.Range(data.time.min, data.time.max);
 #endif
-            player.SetDirectAudioVolume(0, Random.Range(data.volume.min, data.volume.max) * _volume);
+            player.SetDirectAudioVolume(0, sample.volume * _volume);
             player.isLooping = data.loop;
             player.SetDirectAudioMute(0, _muted);
             player.targetTexture = data.texture;
             player.Play();
 
-            var sample = new Sample { player = player, data = data, onFinish = onFinish };
+            
             _playing.Add(sample);
 
             return player;
@@ -172,6 +185,24 @@ namespace Game
             }
         }
 
+        private void UpdateVolume()
+        {
+            var listener = Listener;
+            if (listener != null)
+            {
+                for (int i = 0; i < _playing.Count; ++i)
+                {
+                    var sample = _playing[i];
+
+                    var distance = Vector3.Distance(sample.player.transform.position, listener.transform.position);
+                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance));
+
+                    sample.player.SetDirectAudioVolume(0, volume);
+                }
+            }
+
+        }
+
         #region Unity methods
 
         private void Awake()
@@ -183,6 +214,7 @@ namespace Game
         {
             // Sometimes is not palying on Start...
             // UpdateSamples();
+            UpdateVolume();
         }
 
 #if UNITY_EDITOR

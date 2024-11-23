@@ -15,14 +15,17 @@ namespace Game
         {
             public AudioSource source;
             public Sound data;
+            public float volume;
+            public float pitch;
             public Action onFinish;
             public float muter;
         }
 
-        [SerializeField]
-        private ComponentPool<AudioSource> _sources = new ();
-        [Range(0.0f, 1.0f), SerializeField]
-        private float _volume = 1.0f;
+        [SerializeField] private AudioListener _listener;
+        [SerializeField] private ComponentPool<AudioSource> _sources = new ();
+        [SerializeField, Range(0.0f, 1.0f)] private float _volume = 1.0f;
+        [SerializeField] private float _volumeDistance = 80.0f;
+        [SerializeField] private AnimationCurve _volumeCurve = AnimationCurve.EaseInOut(0.0f, 1.0f, 1.0f, 0.0f);
 
         private List<Sample> _playing = new ();
         private bool _muted = false;
@@ -33,18 +36,31 @@ namespace Game
             set { _volume = value; ApplyVolume(); }
         }
 
+        public AudioListener Listener
+        {
+            get => _listener == null ? (_listener = FindObjectOfType<AudioListener>()) : _listener;
+        }
+
         public AudioSource PlaySound(Sound data, Action onFinish = null)
         {
             var source = _sources.Borrow();
+            var sample = new Sample
+            {
+                source = source,
+                data = data,
+                volume = Random.Range(data.volume.min, data.volume.max),
+                pitch = Random.Range(data.pitch.min, data.pitch.max),
+                onFinish = onFinish
+            };
+
             
             source.clip = data.clip;
-            source.volume = Random.Range(data.volume.min, data.volume.max) * _volume;
-            source.pitch = Random.Range(data.pitch.min, data.pitch.max);
+            source.volume = sample.volume * _volume;
+            source.pitch = sample.pitch;
             source.loop = data.loop;
             source.mute = _muted;
             source.Play();
 
-            var sample = new Sample { source = source, data = data, onFinish = onFinish };
             _playing.Add(sample);
 
             return source;
@@ -165,6 +181,24 @@ namespace Game
             }
         }
 
+        private void UpdateVolume()
+        {
+            var listener = Listener;
+            if (listener != null)
+            {
+                for (int i = 0; i < _playing.Count; ++i)
+                {
+                    var sample = _playing[i];
+
+                    var distance = Vector3.Distance(sample.source.transform.position, listener.transform.position);
+                    var volume = _volumeCurve.Evaluate(Mathf.Clamp01(distance / _volumeDistance));
+
+                    sample.source.volume = volume;
+                }
+            }
+            
+        }
+
         #region Unity methods
         
         private void Awake()
@@ -175,6 +209,7 @@ namespace Game
         private void Update()
         {
             UpdateSamples();
+            UpdateVolume();
         }
 
 #if UNITY_EDITOR
