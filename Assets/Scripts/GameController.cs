@@ -41,6 +41,11 @@ namespace Game
             DI_Binder.Bind(this);
         }
 
+        private void Start()
+        {
+            StartTimer();
+        }
+
         private void OnDestroy()
         {
             DI_Binder.Unbind(this);
