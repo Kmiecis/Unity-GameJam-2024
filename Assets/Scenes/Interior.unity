@@ -7020,7 +7020,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 69276537518640728, guid: 500dea9bc5b56624180e4ad46d83e759, type: 3}
       propertyPath: _description
-      value: Put ouut the clothes in the closet
+      value: Put clothes in the closet
       objectReference: {fileID: 0}
     - target: {fileID: 69276537518640728, guid: 500dea9bc5b56624180e4ad46d83e759, type: 3}
       propertyPath: _requiredCount
