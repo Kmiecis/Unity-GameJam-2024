@@ -43,7 +43,7 @@ namespace Game
 
         public bool IsCompleted
         {
-            get => _completed.Count == _requiredCount;
+            get => _completed.Count >= _requiredCount;
         }
 
         public string Description
@@ -68,6 +68,8 @@ namespace Game
 
         public void RevokeAction(TaskAction action)
         {
+            // Turned off
+            /*
             if (_completed.Contains(action))
             {
                 _completed.Remove(action);
@@ -79,6 +81,7 @@ namespace Game
                     _onIncomplete.Invoke(this);
                 }
             }
+            */
         }
 
         private void OnTasksControllerInject(TasksController controller)
