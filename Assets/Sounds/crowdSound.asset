@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: c402ccb475f13b64d9490422a0ec80aa, type: 3}
   volume:
-    min: 0.2
-    max: 0.4
+    min: 0.1
+    max: 0.3
   pitch:
     min: 1
     max: 1
