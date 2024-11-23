@@ -26,6 +26,7 @@ namespace Game.UI
                 _tasks = new List<UITask>();
 
                 var tasks = _gameController.CurrentTasks;
+                URandom.Shuffle(tasks);
                 foreach (var task in tasks)
                 {
                     var uiTask = _tasksPool.Borrow();
