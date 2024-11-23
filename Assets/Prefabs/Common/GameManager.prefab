@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tasksCount: 10
-  _tasksTime: 10
+  _tasksTime: 300
