@@ -1,7 +1,7 @@
 # GameJam - 2024
 
 ## Description
-Game created by me as a solo developer and my team, during Game Jam hosted internally by Ten Square Games in 2024
+Game created by me as a solo developer and my team, during Game Jam hosted internally by Ten Square Games in 2024  
 Theme: Race against time
 
 ## Link
